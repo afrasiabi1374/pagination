@@ -52,7 +52,7 @@ export default {
             finalPagination[(this.totalVisible / 2)] = this.length - 2
             finalPagination[(this.totalVisible / 2) - 1] = this.length - 3
           }
-        } else if ((this.totalVisible % 2) !== 0) {
+        } else if ((this.totalVisible) === 5) {
           finalPagination[i - 1] = i
           finalPagination[this.totalVisible - 1] = this.length
           finalPagination[this.totalVisible - 2] = this.length - 1
@@ -69,6 +69,26 @@ export default {
           if (this.value >= (this.length - 2)) {
             finalPagination[this.totalVisible - 2] = this.length - 1
             finalPagination[this.totalVisible - 3] = this.length - 2
+          }
+        } else if ((this.totalVisible) === 10) {
+          finalPagination[i - 1] = i
+          finalPagination[this.totalVisible - 1] = this.length
+          finalPagination[this.totalVisible - 2] = this.length - 1
+          finalPagination[this.totalVisible - 3] = this.length - 2
+          finalPagination[this.totalVisible - 4] = this.length - 3
+          finalPagination[(this.totalVisible) / 2] = '...'
+          if (this.value >= (this.totalVisible / 2)) {
+            finalPagination[this.totalVisible - 1] = this.length
+            finalPagination[this.totalVisible - 2] = '...'
+            finalPagination[(this.totalVisible) / 2] = this.totalVisible - (this.totalVisible / 2) + 1
+            finalPagination[((this.totalVisible) / 2) + 1] = this.totalVisible - (this.totalVisible / 2) + 2
+            finalPagination[((this.totalVisible) / 2) + 2] = this.totalVisible - (this.totalVisible / 2) + 3
+          }
+          if (this.value > (this.totalVisible - 4)) {
+            finalPagination[1] = '...'
+            finalPagination[i - 1] = i + 1
+            finalPagination[this.totalVisible - 1] = this.totalVisible
+            finalPagination[this.totalVisible / 2] = this.value
           }
         }
       }

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <Paginate v-model="page" page="/blog" :length="100" :totalVisible="5" />
+      <Paginate v-model="page" page="/blog" :length="15" :totalVisible="6" />
       {{ page }}
       <Nuxt />
     </v-container>

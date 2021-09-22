@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-pagination v-model="page" :length="10" :total-visible="8"></v-pagination>
+    <v-pagination v-model="page" :length="15" :total-visible="12"></v-pagination>
     {{ page }}
     <div>index</div>
   </div>
