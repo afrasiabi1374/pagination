@@ -23,6 +23,9 @@ export default {
       const finalPagination = []
       finalPagination[0] = 1
       finalPagination[this.totalVisible / 2] = '...'
+      if (this.totalVisible === 1) {
+        finalPagination[0] = this.value
+      }
       for (let i = 2; i <= this.totalVisible; i++) {
         if ((this.totalVisible === this.length) && (this.totalVisible >= this.length)) {
           finalPagination[i - 1] = i
